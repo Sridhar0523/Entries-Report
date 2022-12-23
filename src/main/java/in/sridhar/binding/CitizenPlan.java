@@ -1,6 +1,7 @@
 package in.sridhar.binding;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -10,6 +11,7 @@ import lombok.Data;
 @Table(name = "CITIZENS-PLANS-INFO")
 public class CitizenPlan {
 
+	@Id
 	private Integer cid;
 	private String planName;
 	private String planStatus;

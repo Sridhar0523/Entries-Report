@@ -15,8 +15,8 @@ public interface ReportService {
 
 	public List<CitizenPlan> getCitizenPlans(SearchRequest request);
 
-	public void exportExcel(HttpServletResponse response);
+	public void exportExcel(HttpServletResponse response) throws Exception;
 
-	public void exportPdf(HttpServletResponse response);
+	public void exportPdf(HttpServletResponse response) throws Exception;
 
 }
