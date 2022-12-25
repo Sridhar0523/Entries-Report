@@ -1,6 +1,7 @@
 package in.sridhar.binding;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,10 +9,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "CITIZENS-PLANS-INFO")
+@Table(name = "CITIZENS_PLANS_INFO")
 public class CitizenPlan {
 
 	@Id
+	@GeneratedValue
 	private Integer cid;
 	private String planName;
 	private String planStatus;

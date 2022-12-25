@@ -81,8 +81,8 @@ public class ReportServiceImpl implements ReportService {
 		headerRow.createCell(1).setCellValue("Name");
 		headerRow.createCell(2).setCellValue("SSN");
 		headerRow.createCell(3).setCellValue("Gender");
-		headerRow.createCell(0).setCellValue("Plan Name");
-		headerRow.createCell(0).setCellValue("Plan Status");
+		headerRow.createCell(4).setCellValue("Plan Name");
+		headerRow.createCell(5).setCellValue("Plan Status");
 
 		List<CitizenPlan> records = citizenPlanRepository.findAll();
 
@@ -90,11 +90,11 @@ public class ReportServiceImpl implements ReportService {
 		for (CitizenPlan record : records) {
 			XSSFRow dataRow = sheet.createRow(dataRowIndex);
 			dataRow.createCell(0).setCellValue(record.getCid());
-			dataRow.createCell(0).setCellValue(record.getCname());
-			dataRow.createCell(0).setCellValue(record.getSsn());
-			dataRow.createCell(0).setCellValue(record.getGender());
-			dataRow.createCell(0).setCellValue(record.getPlanName());
-			dataRow.createCell(0).setCellValue(record.getPlanStatus());
+			dataRow.createCell(1).setCellValue(record.getCname());
+			dataRow.createCell(2).setCellValue(record.getSsn());
+			dataRow.createCell(3).setCellValue(record.getGender());
+			dataRow.createCell(4).setCellValue(record.getPlanName());
+			dataRow.createCell(5).setCellValue(record.getPlanStatus());
 
 			dataRowIndex++;
 
